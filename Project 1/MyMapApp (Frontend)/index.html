@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Application</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v10.1.0/ol.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jspanel4@4.16.1/dist/jspanel.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+</head>
+<body>
+    <header>
+        <img src="https://www.basarsoft.com.tr/wp-content/uploads/2023/07/lk-amblem-3.png" class="logo">
+        <nav>
+            <button id="addPointBtn">Add Point</button>
+            <button id="queryBtn">Query</button>
+            <button id="toggleModeBtn">Toggle Night/Day Mode</button>
+        </nav>
+    </header>
+    <main>
+        <div id="map" class="map"></div>
+        <div id="infoPanel" class="info-panel hidden">
+            <h2>Point Details</h2>
+            <label for="wktInput">Enter WKT (Well-Known Text):</label>
+            <input type="text" id="wktInput" placeholder="Enter WKT here" readonly />
+            <label for="pointName">Name:</label>
+            <input type="text" id="pointName"><br>
+            <button id="savePointBtn">Save</button>
+        </div>
+        <div id="dataTable" class="data-table hidden">
+            <!-- DataTable will be injected here -->
+        </div>
+        <!-- Drawing Type Selection Panel -->
+        <div id="drawTypePanel" class="draw-type-panel hidden">
+            <h2>Select Drawing Type</h2>
+            <button class="draw-type-btn" data-type="Point">Point</button>
+            <button class="draw-type-btn" data-type="LineString">LineString</button>
+            <button class="draw-type-btn" data-type="Polygon">Polygon</button>
+        <button id="closeDrawTypePanelBtn">Close</button>
+        </div>
+        <!-- Update panel for manual and panel options -->
+        <div id="updatePanel" class="hidden">
+            <select id="geometryTypeSelect">
+                <option value="Point">Point</option>
+                <option value="LineString">LineString</option>
+                <option value="Polygon">Polygon</option>
+            </select>
+            <!-- Koordinat girişleri -->
+            <label for="updateWktInput">WKT:</label>
+            <input type="text" id="updateWktInput" placeholder="Enter WKT" />
+            <input type="text" id="updateNameInput" placeholder="Enter Name" />
+            <button id="panelUpdateBtn">Update via Panel</button>
+            <button id="manualUpdateBtn">Manual Update</button>
+            <button id="closeUpdatePanelBtn">Close</button>
+        </div>        
+        <div id="popup" class="ol-popup">
+            <div id="popup-content"></div>
+        </div> 
+    </main>
+
+    <!-- Başarsoft logosunu sol alt köşeye eklemek için -->
+    <div id="logoContainer">
+        <a href="https://www.basarsoft.com.tr" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Cc-by-sa-1.0_Ba%C5%9Farsoft.png/800px-Cc-by-sa-1.0_Ba%C5%9Farsoft.png" alt="Başarsoft Logo" id="basarsoftLogo">
+        </a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ol@v10.1.0/dist/ol.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jspanel4@4.16.1/dist/jspanel.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turf/6.5.0/turf.min.js"></script>
+    <script src="https://unpkg.com/@turf/turf"></script>
+    <script src="script.js"></script>
+</body>
+</html>

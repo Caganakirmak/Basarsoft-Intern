@@ -1,0 +1,438 @@
+/* Genel stil */
+html, body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #FFFFFF; /* Beyaz arka plan */
+}
+
+/* Header stil */
+header {
+    background: linear-gradient(to right, #00A1FF, #001667); /* Mavi tonları */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF; /* Beyaz metin */
+    padding: 15px 30px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    height: 50px; /* Logo yüksekliği */
+}
+
+/* Navbar stil */
+nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav button {
+    margin: 0 5px;
+    background: transparent;
+    color: #FFFFFF; /* Beyaz metin */
+    border: 2px solid #FFFFFF; /* Beyaz sınır */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav button:hover {
+    background-color: #FFFFFF; /* Beyaz arka plan */
+    color: #00A1FF; /* Mavi metin */
+}
+
+/* Map stil */
+.map {
+    height: calc(100% - 70px);
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    border-top: 5px solid #00A1FF; /* Mavi sınır */
+    margin-top: 20px;
+}
+
+.info-panel.hidden,
+.data-table.hidden {
+    display: none;
+}
+
+/* Panel stilleri */
+.info-panel {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    width: calc(100% - 40px);
+    max-width: 350px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF; /* Beyaz arka plan */
+    border-radius: 10px;
+    z-index: 1000;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+}
+
+.info-panel h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #001667; /* Koyu mavi başlık */
+}
+
+.info-panel label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.info-panel input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+    border-radius: 6px;
+}
+
+.info-panel button {
+    width: 100%;
+    padding: 12px;
+    background: #00A1FF; /* Mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.info-panel button:hover {
+    background-color: #001667; /* Koyu mavi */
+}
+
+.data-table {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: calc(100% - 40px);
+    max-width: 850px;
+    margin: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background: #FFFFFF; /* Beyaz arka plan */
+    border-radius: 10px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+}
+
+/* Tablo stilleri */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #CCCCCC; /* Açık gri sınır */
+}
+
+th {
+    background-color: #00A1FF; /* Mavi başlık arka planı */
+    color: #FFFFFF; /* Beyaz başlık metni */
+}
+
+tr:hover {
+    background-color: #F1F1F1; /* Açık gri satır */
+}
+
+button.table-btn {
+    background-color: #001667; /* Koyu mavi */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 3px;
+    font-size: 14px;
+}
+
+button.table-btn:hover {
+    background-color: #000000; /* Siyah */
+}
+
+/* Güncelleme paneli */
+#updatePanel {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF; /* Beyaz arka plan */
+    padding: 25px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+#updatePanel button {
+    background-color: #00A1FF; /* Mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 6px;
+}
+
+#updatePanel button:hover {
+    background-color: #001667; /* Koyu mavi */
+}
+
+/* Tablo butonları */
+button.table-btn {
+    background-color: #00A1FF; /* Mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0 3px;
+    font-size: 14px;
+}
+
+button.table-btn:hover {
+    background-color: #001667; /* Koyu mavi */
+}
+
+#closeUpdatePanelBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    color: #001667; /* Koyu mavi */
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px; /* Çarpı işareti için uygun boyut */
+    line-height: 1;
+}
+
+#closeUpdatePanelBtn:hover {
+    color: #00A1FF; /* Mavi */
+}
+
+/* Pop-up panelinin genel stili */
+.ol-popup {
+    position: absolute;
+    background-color: #fff; /* Beyaz arka plan rengi */
+    padding: 15px;
+    border: 2px solid #007bff; /* Başarsoft'un renklerinden mavi tonunda border */
+    border-radius: 5px;
+    bottom: 12px;
+    left: -50px;
+    min-width: 250px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Pop-up panelinin içeriği */
+.ol-popup-content {
+    color: #333; /* Yazı rengi */
+    line-height: 1.5;
+}
+
+/* Butonların stili */
+.ol-popup button {
+    background-color: #007bff; /* Başarsoft'un renklerinden mavi */
+    color: #fff; /* Beyaz yazı rengi */
+    border: none;
+    padding: 8px 12px;
+    margin: 5px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ol-popup button:hover {
+    background-color: #0056b3; /* Buton üzerine gelindiğinde koyu mavi */
+}
+
+/* Ok işaretinin stili */
+.ol-popup:after, .ol-popup:before {
+    top: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.ol-popup:after {
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.ol-popup:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #007bff;
+    border-width: 11px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+/* Draw Type Panel */
+.draw-type-panel {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF; /* Beyaz arka plan */
+    padding: 20px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+}
+
+.draw-type-panel h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #001667; /* Koyu mavi başlık */
+}
+
+.draw-type-panel button {
+    background-color: #00A1FF; /* Mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.draw-type-panel button:hover {
+    background-color: #001667; /* Koyu mavi */
+}
+
+#closeDrawTypePanelBtn {
+    background-color: #FF4B4B; /* Kırmızı arka plan */
+}
+
+#closeDrawTypePanelBtn:hover {
+    background-color: #CC0000; /* Koyu kırmızı */
+}
+
+/* Güncelleme Paneli */
+#updatePanel {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #FFFFFF; /* Beyaz arka plan */
+    padding: 20px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px; /* Genişlik */
+    /* Header'ı yukarıda belirleyelim */
+    position: relative;
+}
+
+#updatePanel h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #001667; /* Koyu mavi başlık */
+    text-align: center;
+}
+
+/* Kapatma Tuşu */
+#closeUpdatePanelBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #FF4B4B; /* Kırmızı */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 20px; /* Çarpı işareti için uygun boyut */
+    line-height: 1;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1100; /* Kapatma butonunun panelin üstünde olmasını sağlar */
+}
+
+#closeUpdatePanelBtn:hover {
+    background-color: #CC0000; /* Koyu kırmızı */
+    color: #FFFFFF; /* Beyaz metin */
+}
+
+/* İçerik Stili */
+#updatePanel label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333333; /* Koyu gri */
+}
+
+#updatePanel input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #CCCCCC; /* Açık gri sınır */
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+#updatePanel button {
+    background-color: #00A1FF; /* Mavi arka plan */
+    color: #FFFFFF; /* Beyaz metin */
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+#updatePanel button:hover {
+    background-color: #001667; /* Koyu mavi */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Başarsoft logosu stili */
+#logoContainer {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 1000;
+}
+
+#basarsoftLogo {
+    width: 160px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
