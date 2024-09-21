@@ -5,7 +5,7 @@ This project is a **web application** developed during my internship at Başarso
 ## Project Overview
 
 The application enables users to interact with a map by adding points, updating existing ones, and deleting them. Additionally, users can query and display points in a table format. The backend performs CRUD operations, while the frontend provides an interactive map interface.
-To watch the video, you can click [here](https://github.com/Caganakirmak/Basarsoft-Intern/blob/main/Instruction%20Video.mp4).
+To watch the instruction video, you can click [here](https://github.com/Caganakirmak/Basarsoft-Intern/blob/main/Instruction%20Video.mp4).
 
 ### Key Features
 - Add points on the map
@@ -70,7 +70,7 @@ Bu proje, Başarsoft'taki stajım sırasında geliştirilen bir **web uygulamas�
 ## Proje Genel Bakış
 
 Uygulama, kullanıcıların harita üzerinde noktalar eklemesine, var olanları güncellemesine ve silmesine olanak tanır. Ayrıca, kullanıcılar noktaları tablo formatında sorgulayıp görüntüleyebilir. Backend, CRUD işlemlerini gerçekleştirirken frontend interaktif bir harita arayüzü sağlar.
-Videoyu izlemek için [buraya tıklayabilirsiniz](https://github.com/Caganakirmak/Basarsoft-Intern/blob/main/Instruction%20Video.mp4).
+Yönerge videosunu izlemek için [buraya tıklayabilirsiniz](https://github.com/Caganakirmak/Basarsoft-Intern/blob/main/Instruction%20Video.mp4).
 
 ### Temel Özellikler
 - Harita üzerinde nokta ekleme
@@ -89,7 +89,7 @@ Videoyu izlemek için [buraya tıklayabilirsiniz](https://github.com/Caganakirma
 
 ### Frontend:
 - **HTML, CSS, JavaScript**: Temel frontend teknolojileri
-- **OpenLayers**: Harita işlevselliği için
+- **OpenLayers**: Harita işlevselliği içininstr
 - **DataTables**: Sorgulanan verilerin tablo şeklinde gösterimi için
 
 ## Kurulum Adımları
