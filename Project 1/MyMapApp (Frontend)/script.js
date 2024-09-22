@@ -1,4 +1,3 @@
-//Buradan 
 document.addEventListener('DOMContentLoaded', function () {
     const baseURL = 'https://localhost:7047/api/Point';
     let markerLayer = null;
@@ -74,8 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
             color: 'rgba(255, 0, 0, 0.3)'
         })
     });
-
-// Buraya kadarını hiç dokunma
 
     function loadMarkers() {
         fetch(baseURL)
