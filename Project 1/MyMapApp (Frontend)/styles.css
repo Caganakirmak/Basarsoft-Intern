@@ -55,10 +55,10 @@ nav button:hover {
 
 /* Map stil */
 .map {
-    height: calc(100% - 70px);
+    height: calc(100% - 52px);
     width: 100%;
     position: absolute;
-    top: 70px;
+    top: 52px;
     left: 0;
     border-top: 5px solid #00A1FF; /* Mavi sınır */
     margin-top: 20px;
