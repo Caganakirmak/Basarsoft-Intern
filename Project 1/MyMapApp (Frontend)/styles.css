@@ -45,12 +45,26 @@ nav button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s, color 0.3s;
+    transition: background 0.3s, color 0.3s, border-color 0.3s;;
 }
 
 nav button:hover {
     background-color: #FFFFFF; /* Beyaz arka plan */
     color: #00A1FF; /* Mavi metin */
+    border-color: #7B68EE;
+}
+
+nav button:hover {
+    background-color: #FFFFFF; /* Beyaz arka plan */
+    color: #00A1FF; /* Mavi metin */
+    border-color: #001667; /* Koyu mavi sınır rengi */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Geçiş efektleri */
+}
+
+nav button:hover {
+    background-color: #E6E6FA; /* Açık eflatun */
+    color: #001667; /* Koyu mavi metin */
+    border-color: #00008B; /* Koyu mavi sınır rengi */
 }
 
 /* Map stil */
