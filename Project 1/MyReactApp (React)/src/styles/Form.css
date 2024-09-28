@@ -1,0 +1,84 @@
+/* Form.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('path_to_your_background_image.jpg'); /* Arka plan resmi */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form-card {
+  background: rgba(0, 0, 0, 0.7); /* Yarı şeffaf arka plan */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+p {
+  text-align: center;
+}
+
+a {
+  color: #61dafb; /* Bağlantı rengi */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
